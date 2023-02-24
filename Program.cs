@@ -12,9 +12,10 @@
 
             public void Print()
             {
-                Console.Write(" " + namn + "  ");
-                Console.Write($"{typ} ");
-                Console.WriteLine(typ + "  " + typ);
+                Console.WriteLine("Grundämne: " + namn + "  ");
+                Console.WriteLine($"  Typ: {typ} ");
+                Console.WriteLine("  Smältpunkt: " + smältpunkt + " K");
+                Console.WriteLine("  Kokpunkt: " + kokpunkt + " K");
             }
 
         }
@@ -27,7 +28,9 @@
             Grundämne järn = new Grundämne() { namn = "järn", z = 26, typ = "metall", smältpunkt = 1811, kokpunkt = 3134};
             Grundämne guld = new Grundämne() { namn = "guld", z = 79, typ = "metall", smältpunkt = 1337.33, kokpunkt = 3243};
 
-
+            syre.Print();
+            järn.Print();
+            guld.Print();
 
         }
     }
