@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 
 namespace IDP_assg_3
 {
@@ -41,9 +42,17 @@ namespace IDP_assg_3
             new Grundämne() { namn = "brom", z = 35, typ = "ickemetall", smältpunkt = 265.8, kokpunkt = 332.0 },
             new Grundämne() { namn = "kvicksilver", z = 80, typ = "metall", smältpunkt = 234.321, kokpunkt = 629.88 }};
 
+            //Uppgift 5
+            //foreach (Grundämne xx in Grundämnen)
+            //{
+            //    xx.Print();
+            //}
+
+            Console.WriteLine("Metaller:");
             foreach (Grundämne xx in Grundämnen)
             {
-                xx.Print();
+                if (xx.typ == "metall")
+                Console.WriteLine(xx.namn);
             }
 
         }
