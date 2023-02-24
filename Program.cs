@@ -4,17 +4,15 @@ using System.Reflection;
 namespace IDP_assg_3
 {
     //Inlämningsuppgift IDP_assg_3  2023-02-24
-    //Enkelt program som hanter grunämnen
+    //Enkelt program som hanter grundämnen
     internal class Program
     {
 
         class Grundämne
         {
-
             public string namn, typ;
             public int z;
             public double smältpunkt, kokpunkt;
-
             public void Print()
             {
                 Console.WriteLine("Grundämne: " + namn + "  ");
