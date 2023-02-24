@@ -3,6 +3,8 @@ using System.Reflection;
 
 namespace IDP_assg_3
 {
+    //Inlämningsuppgift IDP_assg_3  2023-02-24
+    //Enkelt program som hanter grunämnen
     internal class Program
     {
 
@@ -27,10 +29,10 @@ namespace IDP_assg_3
         static void Main(string[] args)
         {
 
-            Grundämne syre = new Grundämne() { namn = "syre", z = 8, typ = "ickemetall", smältpunkt = 54.36, kokpunkt = 90.188};
-            Grundämne järn = new Grundämne() { namn = "järn", z = 26, typ = "metall", smältpunkt = 1811, kokpunkt = 3134};
-            Grundämne guld = new Grundämne() { namn = "guld", z = 79, typ = "metall", smältpunkt = 1337.33, kokpunkt = 3243};
-            
+            Grundämne syre = new Grundämne() { namn = "syre", z = 8, typ = "ickemetall", smältpunkt = 54.36, kokpunkt = 90.188 };
+            Grundämne järn = new Grundämne() { namn = "järn", z = 26, typ = "metall", smältpunkt = 1811, kokpunkt = 3134 };
+            Grundämne guld = new Grundämne() { namn = "guld", z = 79, typ = "metall", smältpunkt = 1337.33, kokpunkt = 3243 };
+
             //Uppgift 3.
             //syre.Print();
             //järn.Print();
@@ -48,13 +50,23 @@ namespace IDP_assg_3
             //    xx.Print();
             //}
 
-            Console.WriteLine("Metaller:");
+            //Uppgift 6
+            //Console.WriteLine("Metaller:");
+            //foreach (Grundämne xx in Grundämnen)
+            //{
+            //    if (xx.typ == "metall")
+            //    Console.WriteLine(xx.namn);
+            //}
+
+
+            Console.WriteLine("Grundämnen med en smältpunkt under 273.16 K (d.v.s. 0°C) och en kokpunkt över 273.16:");
             foreach (Grundämne xx in Grundämnen)
             {
-                if (xx.typ == "metall")
-                Console.WriteLine(xx.namn);
+                if (xx.smältpunkt < 273.16 && xx.kokpunkt > 273.16)
+                    Console.WriteLine(xx.namn);
             }
 
         }
     }
 }
+
