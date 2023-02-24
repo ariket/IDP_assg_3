@@ -8,7 +8,7 @@
 
             public string namn, typ;
             public int z;
-            public double ismältpunkt, kokpunkt;
+            public double smältpunkt, kokpunkt;
 
             public void Print()
             {
@@ -22,10 +22,11 @@
 
         static void Main(string[] args)
         {
- 
+
+            Grundämne syre = new Grundämne() { namn = "syre", z = 8, typ = "ickemetall", smältpunkt = 54.36, kokpunkt = 90.188};
 
 
 
-    }
+        }
     }
 }
